@@ -10,7 +10,9 @@ export async function getCharacter(characterName: string) {
     }
     const data = await res.json();
     return data;
-  } catch {
-    throw new Error("Something goes wrong");
+  } catch (error) {
+    throw new Error(
+      error instanceof Error ? error.message : "Something goes wrong"
+    );
   }
 }

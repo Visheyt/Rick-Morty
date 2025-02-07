@@ -9,7 +9,13 @@
   align-items: center;
   width: 100%;
 }
-
+.error,
+.loader {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 250px;
+  color: rgba(101, 110, 194, 1);
+}
 @media (max-width: 500px) {
   .container {
     padding: 30px 20px;

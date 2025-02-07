@@ -21,7 +21,9 @@ function App() {
   return (
     <div className="container">
       <Search handleChange={handleChange} />
-      <ResultBlock result={result} />
+      {isLoading && <div className="loader">Loading...</div>}
+      {error && <div className="error">{error}</div>}
+      {!isLoading && !error && result && <ResultBlock result={result} />}
     </div>
   );
 }
