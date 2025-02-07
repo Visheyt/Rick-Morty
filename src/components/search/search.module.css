@@ -1,0 +1,18 @@
+.input {
+  width: 100%;
+  max-width: 626px;
+  box-shadow: 0px 7px 12px 0px rgba(100, 100, 111, 0.2);
+  border: none;
+  min-height: 64px;
+  padding: 19px 25px;
+  color: rgba(101, 110, 194, 1);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.4px;
+}
+.input::placeholder {
+  color: rgba(101, 110, 194, 1);
+}
+.input:focus {
+  outline: none;
+}
