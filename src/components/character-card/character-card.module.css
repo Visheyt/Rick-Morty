@@ -1,0 +1,46 @@
+.container {
+  box-shadow: 0px 7px 25px 0px rgba(100, 100, 111, 0.2);
+  width: 100%;
+  max-width: 518px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 34px;
+  cursor: pointer;
+}
+.additional {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgba(118, 118, 118, 1);
+  display: flex;
+  justify-content: space-between;
+}
+.unknown {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 30px;
+  color: gray;
+}
+.Alive {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 30px;
+  color: rgba(38, 117, 4, 1);
+}
+.Dead {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 30px;
+  color: rgba(130, 10, 10, 1);
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 15px 8px;
+  }
+  .additional {
+    font-size: 12px;
+  }
+}

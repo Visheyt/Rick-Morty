@@ -16,3 +16,9 @@
 .input:focus {
   outline: none;
 }
+
+@media (max-width: 500px) {
+  .input::placeholder {
+    font-size: 12px;
+  }
+}

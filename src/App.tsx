@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { useCharacter } from "./hooks/useCharacter";
 import { Search } from "./components/search/Search";
+import { ResultBlock } from "./components/result-block/Result-block";
 
 const SEARCH_DELAY = 1000;
 const MIN_LENGTH = 4;
@@ -20,15 +21,7 @@ function App() {
   return (
     <div className="container">
       <Search handleChange={handleChange} />
-      <div>
-        {isLoading ? <span>Loading</span> : ""}
-        {result.map((character) => (
-          <>
-            <div>{character.name}</div>
-            <img src={character.image} alt="" />
-          </>
-        ))}
-      </div>
+      <ResultBlock result={result} />
     </div>
   );
 }

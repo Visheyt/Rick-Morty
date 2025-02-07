@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getCharacter } from "../api/getCharacter";
 import { useDebounce } from "./useDebounce";
+import { ICharacter } from "../types/types";
 
 type Params = {
   characterName: string;
@@ -28,24 +29,3 @@ export const useCharacter = ({ characterName, delay, minLength }: Params) => {
     isLoading,
   };
 };
-
-interface ICharacter {
-  created: string;
-  episode: string[];
-  gender: string;
-  id: number;
-  image: string;
-  location: {
-    name: string;
-    url: string;
-  };
-  name: string;
-  origin: {
-    name: string;
-    url: string;
-  };
-  species: string;
-  status: string;
-  type: string;
-  url: string;
-}
