@@ -18,3 +18,13 @@ export interface ICharacter {
   type: string;
   url: string;
 }
+
+export interface IApiData {
+  info: {
+    count: number | null;
+    pages: number;
+    next: string;
+    prev: number | null;
+  };
+  results: ICharacter[];
+}

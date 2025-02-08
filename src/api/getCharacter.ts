@@ -1,6 +1,10 @@
+import { IApiData } from "../types/types";
+
 const BASE_URL = "https://rickandmortyapi.com/api";
 
-export async function getCharacter(characterName: string) {
+export const getCharacter: (
+  characterName: string
+) => Promise<IApiData> = async (characterName) => {
   const url = `${BASE_URL}/character/?name=${characterName}`;
 
   try {
@@ -8,11 +12,11 @@ export async function getCharacter(characterName: string) {
     if (!res.ok) {
       throw new Error(`API error: ${res.status} ${res.statusText}`);
     }
-    const data = await res.json();
+    const data: IApiData = await res.json();
     return data;
   } catch (error) {
     throw new Error(
       error instanceof Error ? error.message : "Something goes wrong"
     );
   }
-}
+};

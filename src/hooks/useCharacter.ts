@@ -12,7 +12,7 @@ export const useCharacter = ({ characterName, delay, minLength }: Params) => {
   const [result, setResult] = useState<ICharacter[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setLoading] = useState<boolean>();
-  const debounceCharacter = useDebounce(characterName, delay);
+  const debounceCharacter = useDebounce<string>(characterName, delay);
 
   useEffect(() => {
     if (debounceCharacter.length < minLength && !debounceCharacter) return;

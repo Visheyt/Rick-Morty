@@ -1,11 +1,10 @@
 import { ICharacter } from "../../types/types";
-import styles from "./character-card.module.css";
+import { formatDate } from "../../utils/formatDate";
+import styles from "./characterCard.module.css";
 
-function formatDate(isoString: string) {
-  return new Date(isoString).toLocaleDateString("ru-RU");
-}
+type Props = Pick<ICharacter, "name" | "status" | "created">;
 
-export const CharacterCard = ({ name, status, created }: ICharacter) => {
+export const CharacterCard = ({ name, status, created }: Props) => {
   return (
     <div className={styles.container}>
       <h3>{name}</h3>
@@ -14,7 +13,6 @@ export const CharacterCard = ({ name, status, created }: ICharacter) => {
           <span>Status: </span>
           <span className={styles[status]}>{status}</span>
         </div>
-
         <span>Created: {formatDate(created)}</span>
       </div>
     </div>

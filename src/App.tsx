@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { useCharacter } from "./hooks/useCharacter";
 import { Search } from "./components/search/Search";
-import { ResultBlock } from "./components/result-block/Result-block";
+import { ResultBlock } from "./components/resultBlock/ResultBlock";
 
 const SEARCH_DELAY = 1000;
 const MIN_LENGTH = 4;
