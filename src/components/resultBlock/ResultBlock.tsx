@@ -17,6 +17,7 @@ export const ResultBlock = ({ result }: ResultBlockParams) => {
             name={character.name}
             created={character.created}
             status={character.status}
+            url={character.url}
           />
         ))}
       </div>

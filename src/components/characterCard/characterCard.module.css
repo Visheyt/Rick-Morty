@@ -8,6 +8,8 @@
   justify-content: space-between;
   padding: 20px 34px;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 .additional {
   font-size: 14px;
