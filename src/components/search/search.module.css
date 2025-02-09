@@ -9,6 +9,7 @@
   font-size: 22px;
   font-weight: 700;
   line-height: 26.4px;
+  font-family: "Fira Sans", serif;
 }
 .input::placeholder {
   color: rgba(101, 110, 194, 1);

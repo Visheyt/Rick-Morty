@@ -11,6 +11,11 @@
   text-decoration: none;
   color: inherit;
 }
+.container:nth-child(-n + 2) {
+  max-width: 788px;
+  min-height: 262px;
+}
+
 .additional {
   font-size: 14px;
   font-weight: 400;

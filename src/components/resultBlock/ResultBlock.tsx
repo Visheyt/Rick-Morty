@@ -9,7 +9,13 @@ type ResultBlockParams = {
 export const ResultBlock = ({ result }: ResultBlockParams) => {
   return (
     <div className={styles.container}>
-      <span>Found characters: {result.length}</span>
+      {result.length ? (
+        <span className={styles.resultCount}>
+          Found characters: {result.length}
+        </span>
+      ) : (
+        ""
+      )}
       <div className={styles.cards}>
         {result.map((character) => (
           <CharacterCard

@@ -3,3 +3,11 @@
   padding: 0px;
   margin: 0px;
 }
+body {
+  font-family: "Fira Sans", serif;
+}
+h1,
+h2,
+h3 {
+  font-family: "Fira Sans", serif;
+}
