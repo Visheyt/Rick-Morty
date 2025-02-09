@@ -24,10 +24,12 @@ export const SearchPage = () => {
   return (
     <div className={styles.container}>
       <Search handleChange={handleChange} value={characterName} />
-      {isLoading && <div className={styles.loader}>Loading...</div>}
-      {error && <div className={styles.error}>{error}</div>}
-      {!isLoading && !error && defferedResult && (
-        <ResultBlock result={defferedResult} />
+      {isLoading ? (
+        <div className={styles.loader}>Loading...</div>
+      ) : error ? (
+        <div className={styles.error}>{error}</div>
+      ) : (
+        defferedResult && <ResultBlock result={defferedResult} />
       )}
     </div>
   );
