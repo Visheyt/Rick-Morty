@@ -43,6 +43,12 @@
   color: rgba(130, 10, 10, 1);
 }
 
+@media (max-width: 1440px) {
+  .container:nth-child(-n + 2) {
+    max-width: 518px;
+    min-height: 150px;
+  }
+}
 @media (max-width: 500px) {
   .container {
     padding: 15px 8px;
