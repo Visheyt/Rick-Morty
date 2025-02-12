@@ -1,4 +1,4 @@
-import { useDeferredValue, useState } from "react";
+import { useState } from "react";
 import { ResultBlock } from "../components/resultBlock/ResultBlock";
 import { Search } from "../components/search/Search";
 import { useCharacter } from "../hooks/useCharacter";
@@ -15,8 +15,6 @@ export const SearchPage = () => {
     minLength: MIN_SEARCH_LENGTH,
   });
 
-  const defferedResult = useDeferredValue(result);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCharacterName(e.target.value);
   };
@@ -29,7 +27,7 @@ export const SearchPage = () => {
       ) : error ? (
         <div className={styles.error}>{error}</div>
       ) : (
-        defferedResult && <ResultBlock result={defferedResult} />
+        result && <ResultBlock result={result} />
       )}
     </div>
   );
